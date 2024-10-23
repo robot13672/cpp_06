@@ -9,7 +9,8 @@ int main()
 
     Data* ptr = Serializer::deserialize(raw);
 
-    if (ptr == &myData) {
+    if (ptr == &myData) 
+    {
         std::cout << "Good! pointers are equal" << std::endl;
         std::cout << "value: " << ptr->value << std::endl;
     }

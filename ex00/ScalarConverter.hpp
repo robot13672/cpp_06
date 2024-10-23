@@ -62,8 +62,10 @@ class ScalarConverter
 				std::cerr << "Error: value out of range" << std::endl;
 				exit(1);
 			}
-			if (floatVal < CHAR_MIN || floatVal > CHAR_MAX)
+			if (floatVal < CHAR_MIN || floatVal > CHAR_MAX || floatVal < 0)
 				std::cout << "char:   impossible" << std::endl;
+			else if((floatVal > 0 && floatVal < 32) || floatVal == 127)
+				std::cout << "char:   Non displayable" << std::endl;
 			else
 				std::cout << "char:   " << static_cast<char>(floatVal) << std::endl;
 

@@ -1,5 +1,5 @@
 #include "Serializer.hpp"
-#include <cstdint>
+#include <stdint.h>
 
 Serializer::Serializer() {}
 
